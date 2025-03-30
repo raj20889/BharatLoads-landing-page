@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <PageWrapper>
       <header className="bg-blue-50 shadow-md w-full z-50">
-        <div className="container mx-auto flex justify-between items-center py-4 px-8">
+        <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-8">
           
           {/* LOGO with Animation */}
           <Link href="/">
@@ -44,9 +44,16 @@ const Header = () => {
             </motion.div>
           </Link>
 
+          {/* MOBILE MENU BUTTON */}
+          <button className="md:hidden text-blue-900 z-50" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+
           {/* NAV LINKS */}
-          <nav className={`md:flex items-center gap-10 ${isOpen ? "block" : "hidden"} absolute md:relative top-full md:top-0 left-0 md:left-auto w-full md:w-auto bg-blue-50 md:bg-transparent text-blue-900 md:flex-row flex-col p-6 md:p-0 shadow-lg md:shadow-none rounded-md`}>
-            {[
+          <nav
+            className={`md:flex items-center gap-10 fixed md:relative top-0 left-0 h-screen md:h-auto w-3/4 md:w-auto bg-blue-50 md:bg-transparent text-blue-900 md:flex-row flex-col p-6 md:p-0 shadow-lg md:shadow-none rounded-md transition-transform transform ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
+          >
+            {[ 
               { href: "/", icon: <FaHome />, text: "Home" },
               { href: "/about-us", icon: <FaInfoCircle />, text: "About Us" },
               { href: "/investor", icon: <FaUserTie />, text: "Investor", badge: "NEW" },
@@ -62,16 +69,10 @@ const Header = () => {
                 <Link href={href} className="flex items-center px-4 py-2 rounded-lg hover:bg-blue-100 transition-all duration-300">
                   {icon} <span className="text-lg font-semibold ml-2">{text}</span>
                   {badge && <span className="bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded ml-2">{badge}</span>}
-                  <span className="absolute w-full h-[2px] bg-blue-500 bottom-0 left-0 scale-0 group-hover:scale-100 transition-all duration-300"></span>
                 </Link>
               </motion.div>
             ))}
           </nav>
-
-          {/* MOBILE MENU BUTTON */}
-          <button className="md:hidden text-blue-900" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
         </div>
       </header>
     </PageWrapper>

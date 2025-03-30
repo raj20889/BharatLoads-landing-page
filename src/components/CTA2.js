@@ -65,7 +65,7 @@ const CTA2 = () => {
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
             <p className="text-lg text-gray-800 font-semibold">
-              "{reviews[currentIndex].text}"
+              &quot;{reviews[currentIndex].text}&quot;
             </p>
 
             {/* Profile Image, Name & Rating */}
@@ -116,7 +116,6 @@ const CTA2 = () => {
             className="w-full h-auto"
           />
         </motion.div>
-
       </div>
     </section>
   );

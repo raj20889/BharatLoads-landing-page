@@ -20,18 +20,18 @@ const PageWrapper = ({ children }) => {
 const Hero = () => {
   return (
     <PageWrapper>
-      <section className="bg-blue-50 w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-4 md:px-10">
+      <section className="bg-blue-50 w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 sm:px-8 md:px-10 text-center md:text-left">
         
         {/* Left Content */}
         <motion.div
-          className="text-center md:text-left md:w-1/2 flex flex-col justify-start"
+          className="md:w-1/2 flex flex-col justify-start"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: false, amount: 0.2 }} // Animation triggers when 20% of the section is in view
+          viewport={{ once: false, amount: 0.2 }}
         >
-          <h1 className="text-3xl md:text-5xl font-semibold leading-snug text-blue-800">
-            Logistics Made Simple <br /> with{" "}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug text-blue-800">
+            Logistics Made Simple <br /> with {" "}
             <span className="relative inline-block text-black px-3 py-1 rounded-md">
               BharatLoads
               <span className="absolute inset-x-0 bottom-0 h-1 bg-black opacity-50 rounded-md"></span>
@@ -43,12 +43,12 @@ const Hero = () => {
             Join BharatLoads to optimize logistics and shape the future.
           </p>
 
-          <p className="text-md text-gray-700 leading-relaxed max-w-xl mt-4">
+          <p className="text-md text-gray-700 leading-relaxed max-w-xl mx-auto md:mx-0 mt-4">
             Experience India’s first map-based load-truck matching platform, seamlessly connecting transporters and truck owners. With advanced technology and a nationwide network, we deliver efficiency, transparency, and growth opportunities for all.
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex flex-col md:flex-row gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 items-center md:items-start">
             <a
               href="#"
               className="flex items-center bg-black text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-md"
@@ -70,17 +70,16 @@ const Hero = () => {
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: false, amount: 0.2 }} // Animation triggers when 20% of the image is in view
+          viewport={{ once: false, amount: 0.2 }}
         >
           <Image
             src="/hero-img1.png"
             alt="Truck Image"
             width={600}
             height={400}
-            className="w-full h-auto"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-full h-auto"
           />
         </motion.div>
-
       </section>
     </PageWrapper>
   );

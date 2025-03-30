@@ -15,42 +15,41 @@ const buttonVariant = {
 
 const CTA = () => {
   return (
-    <section className="bg-blue-50 py-16 px-4 md:px-10">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between w-full">
+    <section className="bg-blue-50 py-12 px-6 md:py-16 md:px-10 flex flex-col items-center">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between w-full max-w-6xl">
         
         {/* Left Side Image with Scroll Animation */}
         <motion.div
-          className="md:w-1/2 mb-10 md:mb-0"
+          className="w-full md:w-1/2 mb-8 md:mb-0 flex justify-center"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          viewport={{ once: false, amount: 0.3 }} // Animates when 30% of the div is visible
+          viewport={{ once: false, amount: 0.3 }}
         >
           <Image
             src="/truck-imag.png"
             alt="Map Matching Feature"
             width={500}
             height={350}
-            className="w-full h-auto"
+            className="w-full max-w-sm md:max-w-none h-auto"
           />
         </motion.div>
 
         {/* Right Side Content with Scroll Animations */}
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className="w-full md:w-1/2 text-center md:text-left">
           
           <motion.h2
-            className="text-3xl font-extrabold text-pink-700"
+            className="text-2xl md:text-3xl font-extrabold text-pink-700"
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
           >
-            Effortless Load Matching:{" "}
-            <span className="text-black font-bold">With Just One Tap On The Map</span>
+            Effortless Load Matching: <span className="text-black font-bold">With Just One Tap On The Map</span>
           </motion.h2>
 
           <motion.p
-            className="text-md text-gray-700 mt-4 max-w-md"
+            className="text-sm md:text-md text-gray-700 mt-3 md:mt-4 max-w-md mx-auto md:mx-0"
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
@@ -62,7 +61,7 @@ const CTA = () => {
           </motion.p>
 
           <motion.p
-            className="text-md text-gray-700 mt-4 max-w-md font-semibold"
+            className="text-sm md:text-md text-gray-700 mt-3 md:mt-4 max-w-md font-semibold mx-auto md:mx-0"
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
@@ -75,7 +74,7 @@ const CTA = () => {
 
           {/* Download App Button & Playstore Image with Animation */}
           <motion.div
-            className="mt-6"
+            className="mt-6 flex flex-col items-center md:items-start"
             variants={buttonVariant}
             initial="hidden"
             whileInView="visible"
@@ -108,7 +107,6 @@ const CTA = () => {
           </motion.div>
 
         </div>
-
       </div>
     </section>
   );

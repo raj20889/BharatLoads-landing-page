@@ -11,7 +11,7 @@ const Footer = () => {
       style={{ backgroundImage: "url(/img/footer-bg.png)" }}
     >
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Left Section */}
           <div>
             <Link href="/">
@@ -20,7 +20,7 @@ const Footer = () => {
                 alt="BharatLoads Logo"
                 width={200}
                 height={60}
-                className="mb-4"
+                className="mx-auto md:mx-0 mb-4"
               />
             </Link>
             <p className="text-sm leading-relaxed opacity-80 hover:opacity-100 transition-opacity duration-300">
@@ -29,7 +29,7 @@ const Footer = () => {
               way logistics operate in India. Join us in shaping the future of
               logistics.
             </p>
-            <div className="mt-4">
+            <div className="mt-4 flex justify-center md:justify-start">
               <Link href="#">
                 <Image
                   src="/google_play.png"
@@ -45,24 +45,24 @@ const Footer = () => {
           {/* Middle Section - Contact Info */}
           <div>
             <h4 className="text-lg font-bold mb-4">Contact Us</h4>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-center md:justify-start space-x-3">
               <FaMapMarkerAlt className="text-[#3bd1c5] text-lg" />
               <p className="hover:underline">Jamshedpur, Jharkhand</p>
             </div>
-            <p className="mt-2">
+            <p className="mt-2 flex justify-center md:justify-start">
               <Link href="mailto:bharatloads@gmail.com" className="flex items-center space-x-2 hover:text-[#3bd1c5] transition-colors duration-300">
                 <FaEnvelope className="text-[#3bd1c5] text-lg" />
                 <span>bharatloads@gmail.com</span>
               </Link>
             </p>
-            <p className="mt-2">
+            <p className="mt-2 flex justify-center md:justify-start">
               <Link href="tel:+919693736187" className="flex items-center space-x-2 hover:text-[#3bd1c5] transition-colors duration-300">
                 <FaPhone className="text-[#3bd1c5] text-lg" />
                 <span>+91-9693736187</span>
               </Link>
             </p>
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-4">
+            <div className="flex justify-center md:justify-start space-x-4 mt-4">
               <Link href="#" className="text-xl text-gray-400 hover:text-[#3bd1c5] hover:scale-110 transition-all duration-300">
                 <FaFacebookF />
               </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Shortcut Menu</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="flex items-center justify-between group hover:text-[#3bd1c5] transition-all duration-300">
+                <Link href="/" className="flex items-center justify-center md:justify-between group hover:text-[#3bd1c5] transition-all duration-300">
                   Home
                   <span className="flex items-center gap-x-0.5 group-hover:translate-x-1 transition-transform duration-300">
                     <FaArrowRight />
@@ -88,7 +88,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="flex items-center justify-between group hover:text-[#3bd1c5] transition-all duration-300">
+                <Link href="/about" className="flex items-center justify-center md:justify-between group hover:text-[#3bd1c5] transition-all duration-300">
                   About Us
                   <span className="flex items-center gap-x-1.5 group-hover:translate-x-1 transition-transform duration-300">
                     <FaArrowRight />
@@ -96,7 +96,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="flex items-center justify-between group hover:text-[#3bd1c5] transition-all duration-300">
+                <Link href="/contact" className="flex items-center justify-center md:justify-between group hover:text-[#3bd1c5] transition-all duration-300">
                   Contact Us
                   <span className="flex items-center gap-x-1.5 group-hover:translate-x-1 transition-transform duration-300">
                     <FaArrowRight />
@@ -108,14 +108,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-700 mt-8 pt-4 flex flex-col md:flex-row justify-between text-sm">
+        <div className="border-t border-gray-700 mt-8 pt-4 flex flex-col md:flex-row justify-between text-sm text-center md:text-left">
           <p>
             Copyright © 2024 BharatLoads | Website Developed By ❤️
             <Link href="#" className="text-[#3bd1c5] hover:underline transition-all duration-300">
               Mohit Raj
             </Link>
           </p>
-          <div className="flex space-x-4 mt-2 md:mt-0">
+          <div className="flex justify-center md:justify-end space-x-4 mt-2 md:mt-0">
             <Link href="#" className="hover:text-[#3bd1c5] transition-all duration-300">Privacy Policy</Link>
             <Link href="#" className="hover:text-[#3bd1c5] transition-all duration-300">Terms & Services</Link>
           </div>
